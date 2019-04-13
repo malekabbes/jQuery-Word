@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Malek - Word</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="xd.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://bgrins.github.io/spectrum/spectrum.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://bgrins.github.io/spectrum/spectrum.css">
+    <script src="xd.js"></script>
+    <script src="animation.js"></script>
+    <!--BOOTSTRAP-->
+
+    <!--FONT AWESOME-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="head">
+      <div class="editor">
+        <h1 class="header" id="5ra">SIMPLE TEXT EDITOR</h1>
+      </div>
+    </div>
+    <div class="navbar">
+      <ul>
+        <li id="b">
+         <i class="fas fa-bold"></i>&nbsp;&nbsp;bold
+        </li>
+        <li id="i" >
+        <i class="fas fa-italic"></i>&nbsp;&nbsp;Italic
+        </li>
+        <li id="u">
+          <i class="fas fa-underline"></i>&nbsp;&nbsp;underlined
+        </li>
+        <li class="size" >
+            <i class="fas fa-text-height"></i>&nbsp;&nbsp;Size Changer
+          <ul>
+<li >
+  <div class="sizerange">
+      <input id="s" type="range" min="5" max="800" step="10">
+  </div>
+</li>
+          </ul>
+        </li>
+        <li class="font">
+         <i class="fas fa-font"></i>&nbsp;&nbsp;Font Changer
+          <ul id="fontlist">
+            <li id="f" >Helvetica</li>
+            <li id="f" >Times New Roman</li>
+            <li id="f" >Verdana</li>
+            <li id="f" >Courier</li>
+          </ul>
+          <!--CTRL ALT ARROW KEYS-->
+        </li>
+        <li>
+         <i class="fas fa-palette"></i>&nbsp;&nbsp;Color
+          <ul>
+          <li>
+            <div class="colorpicker">
+          <input id="color">
+              <script>
+                  $("#color").spectrum({
+                      color: "#f00",
+                      preferredFormat:"rgb"
+
+                  });
+                  </script>
+                  </div>
+                </li>
+                  </ul>
+        </li>
+      </ul>
+    </div>
+    <br><br><br>
+    <div class="texthere">
+      <label></label class="write">
+        Write your text here :
+        <input id="text" type="text" style="width:110px;height:40px;"/></label
+      >&nbsp;&nbsp;<button type="button" >Apply Changes</button> <br /><br /><br />
+      <p class="output">Output:</p>
+      <p id="rez"></p>
+    </div>
+  </body>
+  </html>
